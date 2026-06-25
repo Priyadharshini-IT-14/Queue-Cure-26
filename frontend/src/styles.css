@@ -1,0 +1,2257 @@
+/* =====================================================
+QUEUECURE PRO PREMIUM HEALTHCARE DESIGN SYSTEM
+FINAL COMPLETE CSS
+===================================================== */
+
+
+/* =====================================================
+ROOT VARIABLES
+===================================================== */
+
+:root {
+
+    /* COLORS */
+
+    --bg: #fffaf3;
+    --surface: #fffdf8;
+    --surface-soft: #fff2db;
+
+    --primary: #f62440;
+    --primary-dark: #b9152a;
+
+    --accent: #c06b2c;
+
+    --success: #5f936b;
+    --warning: #c9861f;
+    --danger: #d6336c;
+
+    --text: #322720;
+    --muted: #7b6f62;
+
+    --line: #ffe5bf;
+
+
+    /* RADII */
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:16px;
+    --radius-xl:22px;
+
+
+    /* SHADOWS */
+
+    --shadow:
+    0 14px 34px rgba(118,72,32,.10);
+
+
+    --shadow-hover:
+    0 18px 45px rgba(118,72,32,.15);
+
+}
+
+
+
+/* =====================================================
+RESET
+===================================================== */
+
+
+*,
+*::before,
+*::after {
+
+    box-sizing:border-box;
+
+}
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+body {
+
+    margin:0;
+
+    min-height:100vh;
+
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff2db 0,
+        #fffaf3 260px
+    );
+
+
+    color:var(--text);
+
+
+    font-family:
+
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+
+    line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+
+
+button,
+input,
+select,
+textarea {
+
+    font:inherit;
+
+}
+
+
+button {
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+/* =====================================================
+TYPOGRAPHY
+===================================================== */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+
+    margin-top:0;
+
+}
+
+
+
+h1 {
+
+    font-size:
+    clamp(2.8rem,7vw,5.8rem);
+
+    line-height:.98;
+
+    margin-bottom:14px;
+
+}
+
+
+
+h2 {
+
+    font-size:
+    clamp(1.8rem,3.6vw,2.9rem);
+
+    margin-bottom:10px;
+
+}
+
+
+
+h3 {
+
+    font-size:1.1rem;
+
+    margin-bottom:14px;
+
+}
+
+
+
+p {
+
+    margin-bottom:16px;
+
+}
+
+
+
+small {
+
+    color:var(--muted);
+
+}
+
+
+
+.eyebrow {
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:.76rem;
+
+    font-weight:900;
+
+}
+
+
+
+/* =====================================================
+LAYOUT
+===================================================== */
+
+
+main {
+
+    width:min(1140px,calc(100% - 36px));
+
+    margin:auto;
+
+    padding:
+    34px 0 64px;
+
+}
+
+
+.compact-main {
+
+    width:min(900px,calc(100% - 32px));
+
+}
+
+
+
+/* =====================================================
+NAVBAR
+===================================================== */
+
+
+.topbar {
+
+    position:sticky;
+
+    top:0;
+
+    z-index:20;
+
+
+    display:grid;
+
+    grid-template-columns:
+    220px 1fr auto;
+
+
+    gap:32px;
+
+
+    align-items:center;
+
+
+    padding:
+    18px clamp(20px,4vw,46px);
+
+
+    background:
+    rgba(255,250,243,.94);
+
+
+    border-bottom:
+    1px solid var(--line);
+
+
+    backdrop-filter:
+    blur(14px);
+
+}
+
+
+
+/* Premium Brand */
+
+
+.brand {
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    font-size:1.25rem;
+
+    font-weight:950;
+
+    letter-spacing:-.03em;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--accent)
+    );
+
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+.brand::before {
+
+
+    content:"✚";
+
+
+    display:grid;
+
+    place-items:center;
+
+
+    width:34px;
+
+    height:34px;
+
+
+    border-radius:10px;
+
+
+    color:white;
+
+
+    background:var(--primary);
+
+
+    box-shadow:
+
+    0 8px 20px
+    rgba(246,36,64,.25);
+
+}
+
+
+
+nav,
+.session,
+.hero-actions,
+.button-row,
+.row-actions,
+.user-management,
+.export-panel {
+
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+
+
+nav {
+
+    justify-content:center;
+
+}
+
+
+
+.session {
+
+    justify-content:flex-end;
+
+    color:var(--muted);
+
+    font-size:.9rem;
+
+}
+
+
+
+nav button,
+.session button,
+.row-actions button,
+.user-management button {
+
+
+    min-height:40px;
+
+    padding:
+    0 14px;
+
+
+    border-radius:10px;
+
+
+    background:transparent;
+
+    color:var(--text);
+
+
+    font-weight:700;
+
+}
+
+
+
+nav button:hover,
+.row-actions button:hover {
+
+    background:var(--surface-soft);
+
+}
+
+
+
+/* =====================================================
+BUTTON SYSTEM
+===================================================== */
+
+
+.solid,
+.ghost {
+
+
+    min-height:46px;
+
+
+    padding:
+    0 20px;
+
+
+    border-radius:
+    var(--radius-md);
+
+
+    font-weight:850;
+
+
+    transition:.2s ease;
+
+}
+
+
+
+.solid {
+
+
+    background:var(--primary);
+
+    color:white;
+
+
+    box-shadow:
+
+    0 10px 22px
+    rgba(246,36,64,.2);
+
+}
+
+
+
+.solid:hover {
+
+    background:
+    var(--primary-dark);
+
+    transform:
+    translateY(-1px);
+
+}
+
+
+
+.ghost {
+
+
+    background:
+    var(--surface-soft);
+
+
+    color:var(--text);
+
+}
+
+
+
+.ghost:hover {
+
+    background:#ffe4b9;
+
+}
+
+
+
+.full {
+
+    width:100%;
+
+}
+
+
+
+/* =====================================================
+FORMS
+===================================================== */
+
+
+label {
+
+    display:block;
+
+
+    margin:
+    14px 0 8px;
+
+
+    font-size:.9rem;
+
+
+    font-weight:800;
+
+}
+
+
+
+input,
+select,
+textarea {
+
+
+    width:100%;
+
+
+    min-height:48px;
+
+
+    padding:
+    0 14px;
+
+
+    border:
+
+    1px solid var(--line);
+
+
+    border-radius:
+    var(--radius-md);
+
+
+    background:
+
+    var(--surface-soft);
+
+
+    color:var(--text);
+
+
+    outline:none;
+
+
+    transition:.2s ease;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+
+    border-color:
+
+    var(--primary);
+
+
+    box-shadow:
+
+    0 0 0 4px
+    rgba(246,36,64,.12);
+
+}
+
+
+
+form .solid {
+
+    margin-top:20px;
+
+}
+
+/* =====================================================
+CARDS
+===================================================== */
+
+
+.hero-board,
+.panel,
+.feature-card,
+.stat-card,
+.now-serving {
+
+
+    background:
+    var(--surface);
+
+
+    border:
+    1px solid var(--line);
+
+
+    border-radius:
+    var(--radius-lg);
+
+
+    box-shadow:
+    var(--shadow);
+
+
+    transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+}
+
+
+
+.hero-board:hover,
+.panel:hover,
+.feature-card:hover,
+.stat-card:hover {
+
+
+    transform:
+    translateY(-2px);
+
+
+    box-shadow:
+    var(--shadow-hover);
+
+}
+
+
+
+.hero-board,
+.panel,
+.feature-card,
+.stat-card {
+
+
+    padding:28px;
+
+}
+
+
+
+/* =====================================================
+HERO SECTION
+===================================================== */
+
+
+.hero {
+
+
+    min-height:
+    calc(100vh - 120px);
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    minmax(0,1.3fr)
+    minmax(280px,.7fr);
+
+
+    gap:48px;
+
+
+    align-items:center;
+
+}
+
+
+
+.hero-copy {
+
+
+    max-width:650px;
+
+
+    color:var(--muted);
+
+
+    font-size:
+    clamp(1.15rem,2vw,1.45rem);
+
+
+    margin-bottom:24px;
+
+}
+
+
+
+.hero-board {
+
+
+    min-height:320px;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    text-align:center;
+
+}
+
+
+
+.hero-board strong {
+
+
+    color:
+    var(--accent);
+
+
+    font-size:
+    clamp(3rem,8vw,6rem);
+
+
+    line-height:1;
+
+}
+
+
+
+.hero-board span {
+
+
+    display:block;
+
+
+    color:var(--muted);
+
+
+    font-weight:900;
+
+}
+
+
+
+/* =====================================================
+GRID SYSTEM
+===================================================== */
+
+
+.feature-grid,
+.stats-grid,
+.analytics-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+
+    gap:22px;
+
+
+    margin:24px 0;
+
+}
+
+
+
+.two-column,
+.dashboard-grid,
+.doctor-grid,
+.display-grid,
+.admin-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+
+    gap:28px;
+
+
+    margin-bottom:28px;
+
+}
+
+
+
+/* =====================================================
+FEATURE CARDS
+===================================================== */
+
+
+.feature-icon {
+
+
+    width:42px;
+
+    height:42px;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    margin-bottom:14px;
+
+
+    border-radius:10px;
+
+
+    background:
+    var(--primary);
+
+
+    color:white;
+
+
+    font-weight:900;
+
+}
+
+
+
+/* =====================================================
+WORKFLOW
+===================================================== */
+
+
+.workflow {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(5,minmax(0,1fr));
+
+
+    gap:18px;
+
+
+    margin-top:28px;
+
+}
+
+
+
+.workflow-step {
+
+
+    min-height:100px;
+
+
+    padding:18px;
+
+
+    display:grid;
+
+
+    align-content:center;
+
+
+    gap:8px;
+
+
+    border-left:
+    4px solid var(--success);
+
+
+    background:
+    var(--surface);
+
+
+    border-radius:12px;
+
+}
+
+
+
+.workflow-step span {
+
+
+    color:
+    var(--accent);
+
+
+    font-weight:900;
+
+}
+
+
+
+/* =====================================================
+PAGE HEADINGS
+===================================================== */
+
+
+.page-heading {
+
+
+    margin-bottom:32px;
+
+}
+
+
+
+.page-heading p {
+
+
+    color:
+    var(--muted);
+
+}
+
+
+
+/* =====================================================
+RECEPTIONIST PAGE
+===================================================== */
+
+
+/* Token generation form */
+
+
+.token-form,
+.generate-token-form {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:16px;
+
+}
+
+
+
+.token-form button,
+.generate-token-form button {
+
+
+    margin-top:18px;
+
+}
+
+
+
+/* Generated token action buttons */
+
+
+.token-actions,
+.modal-actions,
+.button-row {
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    gap:14px;
+
+
+    margin-top:24px;
+
+}
+
+
+
+.token-actions button,
+.modal-actions button,
+.button-row button {
+
+
+    min-height:44px;
+
+
+    padding:
+    0 18px;
+
+
+    border-radius:10px;
+
+
+    font-weight:850;
+
+}
+
+
+
+.token-actions .solid,
+.modal-actions .solid {
+
+
+    background:
+    var(--primary);
+
+
+    color:white;
+
+}
+
+
+
+.token-actions .ghost,
+.modal-actions .ghost {
+
+
+    background:
+    var(--surface-soft);
+
+}
+
+
+
+/* Queue action buttons */
+
+
+.table .row-actions {
+
+
+    display:flex;
+
+
+    gap:10px;
+
+}
+
+
+
+.table .row-actions button {
+
+
+    min-height:38px;
+
+
+    padding:
+    0 14px;
+
+
+    border-radius:8px;
+
+
+    background:
+    var(--surface-soft);
+
+
+    font-weight:800;
+
+}
+
+
+
+.table .row-actions button:hover {
+
+
+    background:
+    var(--primary);
+
+
+    color:white;
+
+}
+
+
+
+/* =====================================================
+STATUS CARDS
+===================================================== */
+
+
+.status-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+
+    gap:16px;
+
+}
+
+
+
+.status-grid span {
+
+
+    display:grid;
+
+
+    gap:6px;
+
+
+    padding:18px;
+
+
+    min-height:80px;
+
+
+    border-radius:12px;
+
+
+    background:
+    var(--surface-soft);
+
+
+    color:
+    var(--muted);
+
+}
+
+
+
+.status-grid strong {
+
+
+    color:
+    var(--text);
+
+
+}
+
+
+
+/* =====================================================
+TRACK QUEUE PAGE
+===================================================== */
+
+
+.track-actions,
+.queue-actions {
+
+
+    display:flex;
+
+
+    gap:16px;
+
+
+    margin-top:28px;
+
+}
+
+
+
+.track-actions button {
+
+
+    min-height:46px;
+
+}
+
+
+
+/* Timeline */
+
+
+.timeline {
+
+
+    display:flex;
+
+
+    gap:20px;
+
+
+    justify-content:space-between;
+
+}
+
+
+
+.timeline div {
+
+
+    flex:1;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:10px;
+
+
+    position:relative;
+
+
+}
+
+
+
+.timeline small {
+
+
+    margin-top:10px;
+
+
+    color:
+    var(--muted);
+
+}
+
+
+
+/* =====================================================
+WAITING ROOM
+===================================================== */
+
+
+.now-serving {
+
+
+    min-height:280px;
+
+
+    padding:32px;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    text-align:center;
+
+}
+
+
+
+.now-serving strong {
+
+
+    color:
+    var(--accent);
+
+
+    font-size:
+    clamp(2.5rem,5vw,4rem);
+
+
+}
+
+
+
+/* =====================================================
+DOCTOR PAGE
+===================================================== */
+
+
+.consultation-actions,
+.doctor-actions {
+
+
+    display:flex;
+
+
+    gap:16px;
+
+
+    margin-top:30px;
+
+}
+
+
+
+.doctor-actions button {
+
+
+    min-height:46px;
+
+
+    padding:
+    0 20px;
+
+}
+
+
+
+/* =====================================================
+TABLES
+===================================================== */
+
+
+.table {
+
+
+    display:grid;
+
+
+    gap:12px;
+
+
+    overflow-x:auto;
+
+}
+
+
+
+.table-head,
+.table-row {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    .7fr 1.2fr 1fr 1fr 1.2fr;
+
+
+    min-width:720px;
+
+
+    gap:12px;
+
+
+    padding:
+    14px 16px;
+
+
+    align-items:center;
+
+
+    border-radius:10px;
+
+}
+
+
+
+.table-head {
+
+
+    background:
+    var(--surface-soft);
+
+
+    color:
+    var(--muted);
+
+
+    font-size:.85rem;
+
+
+    font-weight:900;
+
+}
+
+
+
+.table-row {
+
+
+    background:
+    var(--surface-soft);
+
+
+}
+
+
+
+/* =====================================================
+BADGES
+===================================================== */
+
+
+mark {
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    border-radius:999px;
+
+
+    padding:
+    6px 12px;
+
+
+    background:
+    rgba(95,147,107,.18);
+
+
+    color:
+    var(--success);
+
+
+    font-weight:800;
+
+
+}
+
+/* =====================================================
+ANALYTICS
+===================================================== */
+
+
+.bars,
+.sparkline {
+
+
+    height:180px;
+
+
+    display:flex;
+
+
+    align-items:flex-end;
+
+
+    gap:12px;
+
+
+    padding:18px;
+
+
+    border-radius:12px;
+
+
+    background:
+    var(--surface-soft);
+
+}
+
+
+
+.bars span,
+.sparkline span {
+
+
+    flex:1;
+
+
+    min-width:14px;
+
+
+    border-radius:
+    10px 10px 3px 3px;
+
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--primary),
+        var(--accent)
+    );
+
+}
+
+
+
+.sparkline {
+
+
+    height:120px;
+
+}
+
+
+
+/* =====================================================
+HEATMAP
+===================================================== */
+
+
+.heatmap {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(12,minmax(32px,1fr));
+
+
+    gap:10px;
+
+}
+
+
+
+.heatmap span {
+
+
+    min-height:42px;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    border-radius:8px;
+
+
+    background:
+    var(--surface-soft);
+
+
+    font-weight:800;
+
+}
+
+
+
+/* =====================================================
+STAT CARDS
+===================================================== */
+
+
+.stat-card span {
+
+
+    display:block;
+
+
+    color:
+    var(--muted);
+
+
+    margin-bottom:10px;
+
+}
+
+
+
+.stat-card strong {
+
+
+    display:block;
+
+
+    font-size:1.8rem;
+
+
+}
+
+
+
+/* =====================================================
+QUEUE TOKEN DISPLAY
+===================================================== */
+
+
+.token-stack {
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    gap:12px;
+
+}
+
+
+
+.token-stack span {
+
+
+    min-width:75px;
+
+
+    min-height:46px;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    border-radius:10px;
+
+
+    background:
+    var(--surface-soft);
+
+
+    font-weight:900;
+
+}
+
+
+
+.token-stack span:first-child {
+
+
+    background:
+    var(--primary);
+
+
+    color:white;
+
+}
+
+
+
+/* =====================================================
+LOGIN PAGE
+===================================================== */
+
+
+.login-shell {
+
+
+    min-height:
+    calc(100vh - 160px);
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    padding:30px;
+
+}
+
+
+
+.login-card {
+
+
+    width:
+    min(450px,100%);
+
+
+    padding:40px;
+
+
+    background:
+    var(--surface);
+
+
+    border:
+    1px solid var(--line);
+
+
+    border-radius:
+    var(--radius-xl);
+
+
+    box-shadow:
+    var(--shadow);
+
+}
+
+
+
+.login-copy {
+
+
+    margin-bottom:28px;
+
+
+    color:
+    var(--muted);
+
+}
+
+
+
+.login-card .solid {
+
+
+    margin-top:28px;
+
+}
+
+
+
+/* =====================================================
+FEED / ADMIN PANELS
+===================================================== */
+
+
+.feed {
+
+
+    display:grid;
+
+
+    gap:12px;
+
+}
+
+
+
+.feed p {
+
+
+    margin:0;
+
+
+    padding:16px;
+
+
+    border-radius:12px;
+
+
+    background:
+    var(--surface-soft);
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    color:
+    var(--muted);
+
+}
+
+
+
+.panel-title {
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    margin-bottom:16px;
+
+}
+
+
+
+/* =====================================================
+TOAST
+===================================================== */
+
+
+.toast {
+
+
+    position:fixed;
+
+
+    right:24px;
+
+
+    bottom:24px;
+
+
+    z-index:100;
+
+
+    max-width:
+    min(360px,calc(100vw - 48px));
+
+
+    padding:
+    14px 18px;
+
+
+    border-radius:12px;
+
+
+    color:white;
+
+
+    background:
+    var(--primary-dark);
+
+
+    box-shadow:
+    var(--shadow);
+
+}
+
+
+
+/* =====================================================
+MODAL
+===================================================== */
+
+
+.modal-backdrop {
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    z-index:200;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    padding:24px;
+
+
+    background:
+    rgba(50,39,32,.4);
+
+}
+
+
+
+.token-modal {
+
+
+    width:
+    min(450px,100%);
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    background:
+    var(--surface);
+
+
+    border:
+    1px solid var(--line);
+
+
+    border-radius:
+    var(--radius-xl);
+
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.2);
+
+}
+
+
+
+.token-modal > strong {
+
+
+    display:block;
+
+
+    color:
+    var(--primary);
+
+
+    font-size:
+    clamp(4rem,10vw,6rem);
+
+
+    line-height:1;
+
+
+    margin-bottom:18px;
+
+}
+
+
+
+.token-modal h3 {
+
+
+    font-size:1.4rem;
+
+}
+
+
+
+/* =====================================================
+FILTERS / SEARCH
+===================================================== */
+
+
+.filters {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+
+    gap:14px;
+
+
+    margin-bottom:20px;
+
+}
+
+
+
+.quick-search {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    1fr auto;
+
+
+    gap:18px;
+
+
+    margin-bottom:24px;
+
+}
+
+
+
+.quick-search input {
+
+
+    min-height:52px;
+
+}
+
+
+
+.quick-search button {
+
+
+    min-width:120px;
+
+}
+
+
+
+/* =====================================================
+FINAL BUTTON POLISH
+===================================================== */
+
+
+button {
+
+
+    transition:
+    .2s ease;
+
+}
+
+
+
+button:hover {
+
+
+    transform:
+    translateY(-1px);
+
+}
+
+
+
+/* =====================================================
+RESPONSIVE DESIGN
+===================================================== */
+
+
+@media(max-width:900px){
+
+
+    .topbar,
+    .hero,
+    .two-column,
+    .dashboard-grid,
+    .doctor-grid,
+    .display-grid,
+    .admin-grid {
+
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    nav {
+
+
+        justify-content:flex-start;
+
+    }
+
+
+
+    .feature-grid,
+    .stats-grid,
+    .analytics-grid,
+    .workflow {
+
+
+        grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    }
+
+
+
+    .hero {
+
+
+        min-height:auto;
+
+
+        padding-top:30px;
+
+    }
+
+
+
+    .timeline {
+
+
+        display:grid;
+
+    }
+
+
+
+    .login-card {
+
+
+        padding:30px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    main {
+
+
+        width:
+        calc(100% - 24px);
+
+    }
+
+
+
+    .feature-grid,
+    .stats-grid,
+    .analytics-grid,
+    .workflow,
+    .status-grid,
+    .filters,
+    .quick-search {
+
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .topbar {
+
+
+        padding:
+        14px;
+
+    }
+
+
+
+    .session {
+
+
+        justify-content:flex-start;
+
+    }
+
+
+
+    .heatmap {
+
+
+        grid-template-columns:
+        repeat(4,1fr);
+
+    }
+
+
+
+    .token-actions,
+    .modal-actions,
+    .button-row,
+    .doctor-actions,
+    .track-actions {
+
+
+        flex-direction:column;
+
+    }
+
+
+
+    .token-actions button,
+    .modal-actions button,
+    .button-row button,
+    .doctor-actions button,
+    .track-actions button {
+
+
+        width:100%;
+
+    }
+
+
+
+    .now-serving {
+
+
+        min-height:240px;
+
+
+        padding:24px;
+
+    }
+
+
+}
+
+/* =====================================================
+TRACK QUEUE BUTTON FINAL FIX
+===================================================== */
+
+
+/* Container holding search/input + button */
+.quick-search,
+.track-form,
+.queue-track-form,
+form:has(.track-button) {
+
+    gap:20px;
+}
+
+
+/* Track Queue button itself */
+.track-button,
+.quick-search button,
+.track-form button,
+.queue-track-form button {
+
+    margin-top:20px !important;
+
+    min-height:52px;
+
+    padding:0 24px;
+
+    border-radius:12px;
+
+    font-weight:850;
+
+}
+
+
+/* If button is directly below input */
+input + .track-button,
+input + button {
+
+    margin-top:20px !important;
+
+}
+
+
+
+/* Mobile spacing */
+@media(max-width:600px){
+
+    .track-button,
+    .quick-search button,
+    .track-form button,
+    .queue-track-form button {
+
+        margin-top:16px !important;
+
+        width:100%;
+
+    }
+
+}

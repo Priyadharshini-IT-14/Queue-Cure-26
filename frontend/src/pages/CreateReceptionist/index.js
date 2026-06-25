@@ -1,0 +1,1 @@
+export { CreateReceptionist } from "./CreateReceptionist.js";
