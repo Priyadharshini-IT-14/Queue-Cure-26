@@ -127,3 +127,11 @@ Author
 1.	Name: Priyadharshini S
 2.	LinkedIn: PRIYADHARSHINI S IT	
 3.	GitHub: Priyadharshini-IT-14
+________________________________________
+## 📎 Supporting Docs
+- [Research Notes](docs/research/notes.md)
+- [Architecture Overview](docs/architecture/overview.md)
+- [API Endpoints](docs/api/endpoints.md)
+- [Database Collections](docs/database/collections.md)
+- [Screenshots](docs/screenshots/)
+- [Case Study PDF](docs/QueueCure-CaseStudy.pdf)
